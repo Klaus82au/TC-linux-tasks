@@ -31,11 +31,11 @@ shift $((OPTIND-1))
 a=$1
 b=$2
 
-if ! [[  $1 =~ [-+]?\d*\.?\d*?\d+  ]]; then
+if ! [[  $1 =~ ^[-+]?[0-9]+\.?[0-9]+$  ]]; then
     echo "invalid operand $1"
     exit 1
 fi
-if ! [[ $2 =~ [-+]?\d*\.?\d*?\d+  ]]; then
+if ! [[ $2 =~ ^[-+]?[0-9]+\.?[0-9]+$ ]]; then
     echo "invalid operand $2"
     exit 1
 fi
